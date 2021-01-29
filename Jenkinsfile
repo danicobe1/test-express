@@ -5,6 +5,8 @@ pipeline{
         stage('first Stage'){
             steps{
                 echo 'Hello First Stage...'
+                sh 'uname -a'
+                sh 'id'
             }
             post {
                 always {
