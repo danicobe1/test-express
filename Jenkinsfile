@@ -5,8 +5,7 @@ pipeline{
     stages {
         
         stage('Prepare') {
-            steps{
-             sh "/usr/bin/npm install"
+            steps{             
             sh "/home/jenkins/.nvm/versions/node/v14.15.4/bin/npm install -g yarn"
             sh "yarn install"
             }
