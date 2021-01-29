@@ -1,6 +1,6 @@
 pipeline{
-    agent ubuntu20
-
+    
+    agent {label 'ubuntu20'}
     stages {
         stage('first Stage'){
             steps{
