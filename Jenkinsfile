@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent ubuntu20
 
     stages {
         stage('first Stage'){
