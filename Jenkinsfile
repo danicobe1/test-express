@@ -10,7 +10,7 @@ pipeline{
             }
             post {
                 always {
-                    sh 'npm install'
+                    sh 'yarn'
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline{
             }
             post {
                 always {
-                    sh 'yarn'
+                    sh 'ls'
                 }
             }
         }
