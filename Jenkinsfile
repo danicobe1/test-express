@@ -9,12 +9,8 @@ pipeline{
                 echo 'Hello First Stage...'
                 sh 'uname -a'
                 sh 'id'
-            }
-            post {
-                always {
-                    sh 'yarn'
-                }
-            }
+                 sh 'yarn'
+            }           
         }
 
         stage('second Stage'){
