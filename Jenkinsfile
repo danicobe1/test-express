@@ -16,12 +16,10 @@ pipeline{
         stage('second Stage'){
             steps{
                 echo 'Hello second Stage...'
-            }
-            post {
-                always {
-                    sh 'ls'
-                }
-            }
+                sh 'ls'
+                sh 'pwd'
+                
+            }            
         }
     }
     
