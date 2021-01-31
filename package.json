@@ -1,8 +1,11 @@
 {
   "name": "express.ts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "skeleton API in Typescript",
   "main": "./dist/server.js",
+  "publishConfig": {
+    "registry": "http://192.168.0.106:8081/repository/test-npm-nexus/"
+  },
   "scripts": {
     "build": "webpack --config webpack.config.js",    
     "postinstall": "npm run build",    

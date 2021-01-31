@@ -13,15 +13,11 @@ pipeline{
             }
         }
 
-        stage('second Stage'){
+        stage('publish'){
             steps{
                 echo 'Hello second Stage...'
-            }
-            post {
-                always {
-                    sh 'yarn'
-                }
-            }
+                sh 'npm publish'
+            }            
         }
     }
     
