@@ -1,16 +1,16 @@
 pipeline{
-    agent any
-
+    
+    agent {label 'ubuntu20'}
+    
     stages {
+                    
         stage('first Stage'){
             steps{
                 echo 'Hello First Stage...'
-            }
-            post {
-                always {
-                    sh 'npm install'
-                }
-            }
+                sh 'uname -a'
+                sh 'id'
+                sh 'yarn'
+            }           
         }
 
         stage('publish'){
