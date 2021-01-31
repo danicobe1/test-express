@@ -12,6 +12,13 @@ pipeline{
                 sh 'yarn'
             }           
         }
+        
+         stage('publish'){
+            steps{
+                echo 'Hello second Stage...'
+                sh 'npm publish'
+            }            
+        }
 
     
     }
