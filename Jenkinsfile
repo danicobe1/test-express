@@ -9,17 +9,15 @@ pipeline{
                 echo 'Hello First Stage...'
                 sh 'uname -a'
                 sh 'id'
-                 sh 'yarn'
+                 \sh 'yarn'
             }           
         }
-
-        stage('second Stage'){
-            steps{
-                echo 'Hello second Stage...'
-                sh 'ls'
-                sh 'pwd'
-                
-            }            
+        
+    }
+    
+    post {
+        always {
+            archiveArtifacts artifacts: 'dist/index.js', fingerprint: true     
         }
     }
     
