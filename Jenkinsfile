@@ -9,7 +9,7 @@ pipeline{
                 echo 'Hello First Stage...'
                 sh 'uname -a'
                 sh 'id'
-                 \sh 'yarn'
+                sh 'yarn'
             }           
         }
         
