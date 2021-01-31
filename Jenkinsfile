@@ -17,7 +17,7 @@ pipeline{
     
     post {
         always {
-            archiveArtifacts artifacts: 'dist/index.js', fingerprint: true     
+            archiveArtifacts artifacts: 'dist/server.js', fingerprint: true     
         }
     }
     
